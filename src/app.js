@@ -6,7 +6,7 @@ const { forecast } = require('./utils/forecast')
 const { getGeocode } = require('./utils/geocode')
 
 const app = express()
-const port = process.argv.port || 3000
+const port = process.env.PORT || 3000
 
 //tokens
 const access_token = 'pk.eyJ1Ijoic3VtaXRzcnYiLCJhIjoiY2s4bzYxaTgyMHZmYjNtbzJxYjkwYjloeiJ9.1N5Pcdhmov-rp3VPsLBXRQ'
