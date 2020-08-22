@@ -6,6 +6,7 @@ const { forecast } = require('./utils/forecast')
 const { getGeocode } = require('./utils/geocode')
 
 const app = express()
+const port = process.argv.port || 3000
 
 //tokens
 const access_token = 'pk.eyJ1Ijoic3VtaXRzcnYiLCJhIjoiY2s4bzYxaTgyMHZmYjNtbzJxYjkwYjloeiJ9.1N5Pcdhmov-rp3VPsLBXRQ'
@@ -90,6 +91,6 @@ app.get('/*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('server running on port', 3000)
+app.listen(port, () => {
+    console.log('server running on port', port)
 })
